@@ -29,3 +29,20 @@ Some commands and what they do:
 
 #1.4 Forking and Cloning
 
+To create a new repository:
+Go to your github account.
+Click on the plus sign at the top of the page.
+Type in the name you want for your repository, select public or private, add a license if needed, and click 'Create repository'.
+
+To fork:
+Go to the GitHub repository you want to fork.
+In the upper right, click "Fork".
+
+To clone:
+Go to the GitHub repository you want to clone.
+Copy the HTTPS clone URL from the window in the lower right corner.
+Go to your command line and navigate the folder where you want the clone to exist.
+Type "git clone" followed by the clone URL you copied in step 2.
+You would fork a repository over creating a new one if you plan on working and collaborating on a code project that would be merged back to the code that you forked from.  Forking makes merging much easier.
+
+I didn't have any real struggles setting up git on my machine, or getting my GitHub account set up.  The things I learned have just been learning the beginnings of what git and GitHub are and how to do what we have done so far in the lessons, but maybe more importantly is that I'm starting to understand what they are used for and what useful tools they are for programmers.  I had never used either before starting phase 0.
