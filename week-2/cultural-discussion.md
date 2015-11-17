@@ -1,0 +1,3 @@
+This is my reflection for lesson 2.2, Cultural Discussion:
+
+My biggest fear about attending bootcamp is simply that I will fail.  I am worried that I do not know enough going in, that I won't learn fast enough, that I will fall behind, and/or just not understand things that everyone else does.  However, having said that, I am also very motivated, and the video that I watched that made an analogy to being a cook in the kitchen as opposed to a customer at a restaurant really stood out to me.  I definitely plan on being a cook, and taking charge of my own education.  Even if I fail, I'm looking forward to trying like hell along the way!
