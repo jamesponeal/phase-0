@@ -1,7 +1,7 @@
 ##This is my reflection entry for peer-pairing exercise 3.4.
 
 ###In this exercise, we manipulated the positioning of some div blocks and took screenshots of the result.  Below are my screenshots for each exercise:
-![Exercise1](imgs/exercise1.png)
+[Exercise1](imgs/exercise1.png)
 ![Exercise2](imgs/exercise2.png)
 ![Exercise3](imgs/exercise3.png)
 ![Exercise4](imgs/exercise4.png)
