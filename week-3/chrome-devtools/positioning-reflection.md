@@ -6,7 +6,7 @@ Exercise 1:
 ![Exercise1](imgs/exercise1.png)
 
 Exercise 2:
-![Exercise2](imgs/exercise1.png)
+![Exercise2](imgs/exercise2.png)
 
 Exercise 3:
 ![Exercise3](imgs/exercise3.png)
