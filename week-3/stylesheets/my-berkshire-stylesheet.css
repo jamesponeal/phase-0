@@ -1,0 +1,67 @@
+html {
+   color: #000080;
+   background-color: #ffffff;
+}
+
+a:link {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+header {
+    text-align: center;
+    white-space: pre-line;
+    font-weight: bold;
+    margin-top: -20px;
+    border-bottom: thin solid gray;
+}
+
+.left {
+  width: 550px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right {
+  width: 550px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top-line {
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: -9px;
+}
+
+.big-letter {
+  font-size: 32px;
+}
+
+.inc {
+  font-size: 13px;
+}
+
+.address {
+  font-size: 13px;
+  margin-top: -9px;
+  margin-bottom: -9px;
+}
+
+.official {
+  font-size: 16px;
+  margin-top: -9px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+}
+
+.notes {
+  font-size: 10px;
+}
+
+li {
+  margin-bottom: 30px;
+}
