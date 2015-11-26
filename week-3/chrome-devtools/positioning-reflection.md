@@ -1,17 +1,12 @@
 ##This is my reflection entry for peer-pairing exercise 3.4.
 
-<<<<<<< HEAD
 ####In this exercise, we manipulated the positioning of some div blocks and took screenshots of the result.  Below are my screenshots for each exercise:
 
 Exercise 1:
 ![Exercise1](imgs/exercise1.png)
 
 Exercise 2:
-=======
-###In this exercise, we manipulated the positioning of some div blocks and took screenshots of the result.  Below are my screenshots for each exercise:
-[Exercise1](imgs/exercise1.png)
->>>>>>> b3543c98f56a285e50c94617043517d360c7dbd0
-![Exercise2](imgs/exercise2.png)
+![Exercise2](imgs/exercise1.png)
 
 Exercise 3:
 ![Exercise3](imgs/exercise3.png)
