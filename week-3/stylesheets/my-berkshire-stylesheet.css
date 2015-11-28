@@ -19,16 +19,9 @@ header {
     border-bottom: thin solid gray;
 }
 
-.left {
-  width: 550px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.right {
-  width: 550px;
-  display: inline-block;
-  vertical-align: top;
+main {
+    border-bottom: thin solid gray;
+    padding-bottom: -40px;
 }
 
 .top-line {
@@ -62,6 +55,90 @@ header {
   font-size: 10px;
 }
 
-li {
-  margin-bottom: 30px;
+.left {
+  width: 500px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+  margin-left: 64px;
+  margin-bottom: 0px;
 }
+
+.right {
+  width: 550px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 18px;
+  margin-left: 17px;
+  margin-bottom: 0px;
+}
+
+li {
+  margin-bottom: 36px;
+}
+
+.withnote {
+  margin-bottom: 19px;
+}
+
+.oddspacing {
+  margin-bottom: 27px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17px;
+}
+
+.geicotext {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.contactinfo {
+  font-size: 13px;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  border-top: thin solid gray;
+  border-bottom: thin solid gray;
+}
+
+.legal {
+  padding-top: 1px;
+}
+
+.copyright {
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+/*
+This is my reflection for exercise 3.3
+
+For this exercise, we added CSS to an existing HTML file that we created in week 2.
+The intent was to reproduce a 'Berkshire Hathaway' website.
+We were asked to answer the following questions in our reflection:
+
+
+1. What is important to know when linking an external file (like a stylesheet) to an HTML file?
+A few things, first the stylesheet must be referenced in the HTML file using something like this:<link type="text/css" rel="stylesheet" href="stylesheets/my-berkshire-stylesheet.css"/>. Also, set up your HTML using classes so that you can easily reference the parts of the content you want with your styling in the stylesheet.
+
+2. What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+There weren't really any tricks that I used, it was just trial and error and going back and forth between my site and the real site to be sure that they matched.
+
+3. What CSS did you use to modify the element style (like size, color, etc.)
+I used properties such as font-size, color, text-align, as well as many others as shown in my CSS above.
+
+4. Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+Yes, I modified a lot of my HTML file during this exercise to include classes so that I could reference it with my CSS.  I ended up using a lot of classes, but no ID's.  I just found that there were typically several places where a certain set of CSS code should apply, so classes seemed more useful than ID's.
+
+5. When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+I think that both my code and the original code was fairly clean.  One big difference was the list of links, I used two lists and split them up by floating one to the left and the other to the right.  The original code used a table.  I'm not sure which one is better practice, but I thought the way I did it was easier to read and manipulate.
+
+*/
