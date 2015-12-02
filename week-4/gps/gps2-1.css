@@ -1,0 +1,29 @@
+.column-1 {
+  float: left;
+  display: inline-block;
+  background-color: #5986cc;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.column-2 {
+  float: right;
+  display: inline-block;
+  background-color: #ff9789;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+header {
+  background-color: #b25c48;
+}
+
+footer {
+  background-color: #b25c48;
+  display: block;
+  clear: both;
+}
