@@ -10,11 +10,10 @@ cartmans_phrase = "Screw you guys " + "I'm going home."
 # This error was analyzed in the README file.
 # --- error -------------------------------------------------------
 
-def cartman_hates(thing)
-  while true
-    puts "What's there to hate about #{thing}?"
-  end
-end
+#def cartman_hates(thing)
+#  while true
+#    puts "What's there to hate about #{thing}?"
+#end
 
 # This is a tricky error. The line number may throw you off.
 
@@ -34,7 +33,7 @@ end
 # The error message is indicating that the error is occuring after the last line of the code.
 
 # 6. Why did the interpreter give you this error?
-# The interpreter gave me this error because there is a while loop that does not end.  The interpreter is looking for an end to the while loop and never finds one.
+# The interpreter gave me this error because there is a while loop that does not end.  The interpreter is looking for an end to the while loop and never finds one.  An 'end', or some condition to facilitate an ending, needs to be added to the while loop.
 
 # --- error -------------------------------------------------------
 
@@ -182,12 +181,24 @@ require_relative "cartmans_essay.md"
 # 2. What is the type of error message?
 # require_relative': cannot load such file
 # 3. What additional information does the interpreter provide about this type of error?
-#
+# The interpreter provides the path to the location where it is looking for the missing file.
 # 4. Where is the error in the code?
-#
+# Line 178 is asking to find a file called "cartmans_essay.md" but the file does not exist.
 # 5. Why did the interpreter give you this error?
-#
+# The command require_relative "cartmans_essay.md" is asking for a file called "cartmans_essay.md" but the file does not exist.
 
 
 # --- REFLECTION -------------------------------------------------------
 # Write your reflection below as a comment.
+#
+# Which error was the most difficult to read?
+# I had the most difficulty with the first error because I was thrown off by the line number, even though it warned us that the line number might throw us off!
+
+# How did you figure out what the issue with the error was?
+# I felt this was fairly straight forward.  The first line of the error message tells us what the error is.
+
+# Were you able to determine why each error message happened based on the code?
+# Yes, between inspecting the code and reading the error message, I thought it was fairly straight forward to diagnose each problem and find why the error was happening.
+
+# When you encounter errors in your future code, what process will you follow to help you debug?
+# I think in the future I will use the same process I used in this exercise, which is reading the error message and inspecting the code, and using both together to diagnose the problem(s).
