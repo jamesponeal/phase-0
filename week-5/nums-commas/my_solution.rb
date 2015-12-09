@@ -1,3 +1,6 @@
+
+# I AM WORKING ON REFACTORING THIS... PLEASE DO NOT GRADE THIS YET !!!!!
+
 # Numbers to Commas Solo Challenge
 
 # I spent [5] hours on this challenge.
