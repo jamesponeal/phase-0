@@ -1,5 +1,5 @@
 
-# I AM WORKING ON REFACTORING THIS... PLEASE DO NOT GRADE THIS YET !!!!!  12/9/2015.
+
 
 # Numbers to Commas Solo Challenge
 
