@@ -1,6 +1,6 @@
 # Numbers to Commas Solo Challenge
 
-# I spent [5] hours on this challenge.
+# I spent [6] hours on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
@@ -81,44 +81,42 @@ end
 
 # 2. Refactored Solution
 
-# I went through my code, used online resources to look for some built-in
-# methods that I could use to shorten and simplify my code.  I was
-# unsuccessful at finding anything.
+# It took me quite a while to refactor this.  I had to research a lot of different methods
+# but finally realized I could do it with methods I already knew, but thought about starting
+# at the back of the source array rather than the beginning.
+
+# Refactoring Pseudocode:
+
+  # Convert integer argument into a string.
+  # Split string into characters and push into an array.
+  # Count elements in the array.
+  # If number of elements is 3 or less, we can rejoin the elements into a string and return it without adding commas.
+  # If number of elements is 4 or more, we need to add commas.
+  # Push elements to new array and add commas where appropriate.
+    # - Count elements in array.
+    # - If more than 3 elements, add last 3 elements from old array to front of new array, then add a comma to the new array.  Repeat until there are no longer more than 3 elements.
+    # - Add remaining elements to front of new array.
+  # Rejoin elements into a new string that gets returned.
+
 
 
 def separate_comma(number)
   array = number.to_s.split(//)
+  final_array = []
   if array.length <= 3
     final_answer = array.join("")
   else
-    if array.length % 3 == 0
-      first_counter = 3
-    else
-      first_counter = array.length % 3
+    while array.length > 3
+      final_array.unshift(array[-3,3])
+      final_array.unshift(",")
+      3.times {array.delete_at(-1)}
     end
-    counter = 3
-    final_array = []
-    while array.length > 0
-      if first_counter > 0 #If > 0, it's not time to push first comma yet.
-        final_array.push(array[0])
-        array.shift
-        first_counter -= 1
-      elsif first_counter == 0 #If first counter hits zero, push first comma.
-        final_array.push(",")
-        first_counter -= 1
-      elsif counter > 0 #If counter > 0, keep pushing digits.
-        final_array.push(array[0])
-        array.shift
-        counter -= 1
-      elsif counter <= 0 #If counter hits zero, push comma, reset counter.
-        final_array.push(",")
-        counter = 3
-      end
-    end
-  final_answer = final_array.join("")
+    final_array.unshift(array[-array.length,array.length])
+    final_answer = final_array.join("")
   end
   return final_answer
 end
+
 
 
 
@@ -134,25 +132,36 @@ end
 
 # 1) What was your process for breaking the problem down? What different approaches did you consider?
 
-# It took me a while to wrap my mind around the logic in this problem.  My process for breaking the problem down was to first start writing psuedocode.  I basically looked at different loops and counters to get the desired effect.  Finally I realized that I needed (or think I need) two different counters: one to handle up to the first comma, and another to handle the rest.
+# It took me a while to wrap my mind around the logic in this problem.  My process for
+# breaking the problem down was to first start writing psuedocode.  I basically looked at
+# different loops and counters to get the desired effect.  In my initial solution I used
+# two different counters: one to handle up to the first comma, and another to handle the
+# rest.  I tried to refactor it and wasn't very successful.  On my 2nd try at refactoring I
+# was able to be more efficient and thought about tackling the new array from the back
+# rather than the front and it changed my whole approach.
 
 
 # 2) Was your pseudocode effective in helping you build a successful initial solution?
 
-# - Writing pseudocode was definitely helpful.  Writing it out in English definitely made things make more sense.  I had to go back and re-write my pseudocode a few times because my initial tries didn't work.
+# Writing pseudocode was definitely helpful.  Writing it out in English definitely made
+# things make more sense.  I had to go back and re-write my pseudocode a few times because
+# my initial tries didn't work or were messy.
 
 
 # 3) What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
 
-# Unfortunately I was unsuccessful at refactoring.  I spent some time thinking about each step I used, how they might be combined, and researched methods on ruby-doc.org that I might use but could not come up with a way to simplify it.
+# One method I had used that I had heard of, but hadn't used much was .unshift, which adds
+# elements to the front of arrays.  I also had never specified a group of elements in an
+# array before, such as array[-3,3], so that was new to me.  After I discovered that, it
+# made refactoring in this exercise much easier.
 
 
 # 4) How did you initially iterate through the data structure?
 
-# Initially I just tried to use one counter, but since the number of digits before the first comma could be either 1, 2, or 3 digits, I could not find a way to do this using one counter.  I resorted to using a 'first counter' to handle up to the first comma, then a 2nd counter to handle everything else.
+# Initially I tried tackling the original array from the beginning and used a 'first counter' to handle up to the first comma, then a 2nd counter to handle everything else.  This was long and messy code.  When I refactored it, I started from the back of the array and used .unshift and .pop to manipulate two arrays I was working with.
 
 
 # 5) Do you feel your refactored solution is more readable than your initial solution? Why?
 
-# Unfortunately, no, it's the same.  I could not find a solution that simplified my code.
+# Definitely.  I think my refactored solution is more readable because it is shorter, and just is cleaner with how it loops.
 
