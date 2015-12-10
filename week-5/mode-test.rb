@@ -4,15 +4,15 @@ array1 = ["dog", "cat", "cat", "horse", "horse", "cat", "horse"]
 
 def mode(array)
   hash1 = Hash[array.map {|x| [x, array.count(x)]}]
-  count = 1
+  mode_value = 0
   hash1.each_value do |y|
-    if y > count
-      count = y
+    if y > mode_value
+      mode_value = y
     end
   end
   final_array = []
   hash1.each do |key, value|
-    if value == count
+    if value == mode_value
       final_array.push(key)
     end
   end
