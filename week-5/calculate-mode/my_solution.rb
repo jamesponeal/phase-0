@@ -98,7 +98,8 @@ end
 # out and had working code it seemed simple, but we spent a lot of time figuring that one
 # step out.
 
-# 4) What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+# 4) What methods did you use to iterate through the content? Did you find any good ones when you were refactoring?
+# Were they difficult to implement?
 # We used .each on the original array, and .each_value on the hash.  We didn't get too fancy
 # on this one.
 
