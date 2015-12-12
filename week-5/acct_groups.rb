@@ -131,7 +131,11 @@ acct_groups(name_array)
 # thing where I took a dozen.
 
 # 4) What data structure did you decide to store the accountability groups in and why?
-# I stored the data into an array of arrays.  This seemed to make the most sense to me since that seemed to be the closest thing to what we were actually trying to do.  I considered a hash where the key would be the name and the value was the group number, but ultimately decided an array of arrays would be easier to work with, and give me a closer representation of what I was actually after.
+# I stored the data into an array of arrays.  This seemed to make the most sense to me since that
+# seemed to be the closest thing to what we were actually trying to do.  I considered a hash where
+# the key would be the name and the value was the group number, but ultimately decided an array of
+# arrays would be easier to work with, and give me a closer representation of what I was actually after.
 
 # 5) What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
-# I didn't learn any new specific methods, but it was the first time other than GPS 2.2 that I had created multiple methods and passed information between them.
+# I didn't learn any new specific methods, but it was the first time other than GPS 2.2 that I had
+# created multiple methods and passed information between them.
