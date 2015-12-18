@@ -199,7 +199,7 @@ class BingoBoard
       puts " "
       puts " *** DID YOU HEAR ME? ***"
       puts " "
-      puts " *** HELLLZ YEAH!!!!!  I SAID BINGOOOOOOOOO M'ER F'ER!!!! *** !!!!!!!!!!!"
+      puts " *** HELLLZ YEAH !!!!!  I SAID BINGOOOOOOOOO !!!!!!!! *** "
       puts " "
       puts " That means you won .... So yeah... Congratulations!!!"
       puts " Thanks for playing my Bingo Game!!!"
