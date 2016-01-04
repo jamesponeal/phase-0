@@ -1,6 +1,36 @@
 
 // Add the finished solution here when you receive it.
 //
+//sum refactor
+function sum(number_array){
+  var total = 0;
+  for (var i = 0; i < number_array.length; i++){total += number_array[i]}
+  return total
+}
+
+//average refactor
+function mean(number_array){
+  var total = 0;
+  for (var i = 0; i < number_array.length; i++){
+    total += number_array[i];
+    var average = total/(i+1);
+  }
+  return average
+}
+
+//median refactor
+function median(number_array){
+  var middle = Math.floor(number_array.length/2);
+  number_array.sort( function(a,b) {return a - b;} );
+
+  if(number_array.length % 2 == 0)
+    //even
+    return ((number_array[middle-1] + number_array[middle]) / 2);
+  else
+    //odd
+    return number_array[middle]
+}
+
 // __________________________________________
 // Tests:  Do not alter code below this line.
 
