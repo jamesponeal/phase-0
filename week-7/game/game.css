@@ -1,0 +1,56 @@
+html {
+  background-color: #d1d1e0;
+}
+
+h1 {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 70px;
+  margin: 0em 0px 0px 0px;
+  display: block;
+}
+
+h2 {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  margin: 0px 0px 5px 0px;
+  display: block;
+}
+
+.left {
+  display: inline-block;
+  text-align: center;
+  float: left;
+  margin: 0em 10em 0em 6em;
+  height: 15em;
+  width: 20em;
+  border: 7px solid black;
+  border-radius: 20px;
+  padding: 1em 0em 0em 0em;
+}
+
+.right {
+  display: inline-block;
+  text-align: center;
+  float: right;
+  margin: 0em 6em 0em 10em;
+  height: 15em;
+  width: 20em;
+  border: 7px solid black;
+  border-radius: 20px;
+  padding: 1em 0em 0em 0em;
+}
+
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.parameter {
+  font-size: 18px;
+  font-weight: bold;
+}
+

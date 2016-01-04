@@ -202,30 +202,42 @@ function fight_results() {
   };
   bad_ninja.reset();
   good_ninja.reset();
-  console.log("Good Ninja Hit Points: " + good_ninja.hitpoints);
-  console.log("Bad Ninja Hit Points: " + bad_ninja.hitpoints);
+  document.getElementById("good_hp").innerHTML = good_ninja.hitpoints;
+  document.getElementById("bad_hp").innerHTML = bad_ninja.hitpoints;
   if (good_ninja.hitpoints <= 0) {
-    console.log ("The good ninja has been defeated!!");
     good_ninja.alive = false;
   }
   if (bad_ninja.hitpoints <= 0) {
-    console.log ("The bad ninja has been defeated!!");
     bad_ninja.alive = false;
+  }
+  if (good_ninja.alive == true) {
+    document.getElementById("good_alive").innerHTML = "ALIVE";
+  } else {
+    document.getElementById("good_alive").innerHTML = "DEAD";
+    alert("The good ninja has been defeated!!");
+  }
+  if (bad_ninja.alive == true) {
+    document.getElementById("bad_alive").innerHTML = "ALIVE";
+  } else {
+    document.getElementById("bad_alive").innerHTML = "DEAD";
+    alert("The bad ninja has been defeated!!");
   }
 }
 
 round_counter = 0;
 while (good_ninja.alive == true && bad_ninja.alive == true) {
-  console.log("~~~~~~~");
-  console.log("Round " + (round_counter+1));
+  alert("You are now starting round " + (round_counter+1));
+  var action1 = prompt("Please enter your 1st action for round " + (round_counter+1) + ".  Enter 'kick', 'punch', 'block_kick', or 'block_punch'.");
+  var action2 = prompt("Please enter your 2nd action for round " + (round_counter+1) + ".  Enter 'kick', 'punch', 'block_kick', or 'block_punch'.");
+  good_ninja.fight(action1);
+  good_ninja.fight(action2);
   actions = ["kick", "punch", "block_kick", "block_punch"];
-  good_ninja.fight(actions[Math.floor(Math.random()*4)]);
-  good_ninja.fight(actions[Math.floor(Math.random()*4)]);
   bad_ninja.fight(actions[Math.floor(Math.random()*4)]);
   bad_ninja.fight(actions[Math.floor(Math.random()*4)]);
   fight_results();
   round_counter += 1;
 };
+
 
 
 // REFLECTION:
