@@ -33,6 +33,32 @@
 // x = Math.floor(Math.random() * 4) + 1;
 // console.log(x);
 
-prompt("Hello, please enter your name:");
+// prompt("Hello, please enter your name:");
 
 // console.log("Your name is " + greeting + ".  That's a great name.")
+
+
+
+// var numberSample = [5,2,3,1,4].sort();
+// console.log(numberSample);
+
+
+// var lightBulb = {}
+
+// lightBulb[lumens] = 40;
+
+
+// if(lightBulb.lumens === 40) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// };
+
+
+var answerBank = {
+  optionOne: "Wrong!",
+  optionTwo: "Wrong!",
+  optionThree: "Correct",
+};
+
+console.log(answerBank.optionThree);
