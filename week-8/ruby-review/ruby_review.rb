@@ -1,5 +1,7 @@
+# For my ruby review challenge, I chose to do the Super FizzBuzz challenge.
+
 # I worked on this challenge by myself.
-# This challenge took me [#] hours.
+# This challenge took me 1 hours.
 
 
 # PSEUDOCODE:
