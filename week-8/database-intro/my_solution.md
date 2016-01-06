@@ -1,20 +1,20 @@
 
-### This is my reflection for lesson 8.4:
+## 8.4 Reflection:
 
 
-##What are databases for?
+###What are databases for?
 Databases store large amounts of information in a way that makes it easily accessable.
 
 
-##What is a one-to-many relationship?
+###What is a one-to-many relationship?
 A one-to-many relationship is one where you have items in one table that correspond to several items in another table.  For example, if you have a 'persons' table and a 'cars' table.  There might be people who own several cars and some who own none.
 
 
-##What is a primary key? What is a foreign key? How can you determine which is which?
+###What is a primary key? What is a foreign key? How can you determine which is which?
 A primary key is a key that is unique to that table.  There will be no two items on the table that have the same primary key.  A foreign key is a field in a table that correspondes to a field in another table.  You can tell the difference because the primary key is typically named 'id', and a foreign key typically references the name of the table that it refers to.
 
 
-##How can you select information out of a SQL database? What are some general guidelines for that?
+###How can you select information out of a SQL database? What are some general guidelines for that?
 There are a library of commands available for selecting information.  The main one is SELECT, but here is a list of common commands:
 
 SELECT is the clause you use every time you want to query information from a database.
