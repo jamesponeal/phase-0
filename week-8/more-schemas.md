@@ -23,8 +23,10 @@ All of this makes sense to me right now.  I'm sure some things might get confusi
 
 ##Schemas:
 
+One-to-One:
 ![One-to-One](imgs/8-5Schema1.png)
 
+Many-to-Many:
 ![Many-to-Many](imgs/8-5Schema2.png)
 
 
