@@ -67,10 +67,8 @@ var officers = {
   // Find greatest value in count object and add that key and value to the officers object.
 
 
-
 // __________________________________________
 // Initial Solution
-
 
 
 // var offices = Object.keys(officers);
@@ -113,38 +111,28 @@ var officers = {
 // __________________________________________
 // Refactored Solution
 
-
-var offices = Object.keys(officers);
-
-for(i=0; i<offices.length; i++){
-  for(voters in votes){
-    candidate = votes[voters][offices[i]];
-    for (positions in voteCount){
-      if(positions == offices[i]){
-        if(voteCount[positions][candidate] >= 1){
-          voteCount[positions][candidate] ++;
+for (candidates in voteCount){
+  for(voters in votes) {
+    name = votes[voters][candidates];
+    for(offices in voteCount) {
+      if (offices == candidates) {
+        if (voteCount[offices][name] >= 1) {
+        voteCount[offices][name] ++;
         } else {
-          voteCount[positions][candidate] = 1;
+          voteCount[offices][name] = 1;
         }
       }
     }
   }
-}
 
-console.log(voteCount);
-
-
-for(positions in voteCount){
-  var maxcount = 0;
-  for(candidates in voteCount[positions]){
-    if(voteCount[positions][candidates] > maxcount){
-      maxcount = voteCount[positions][candidates];
-      officers[positions] = candidates;
+  numberChecker = 0;
+  for (people in voteCount[candidates]){
+    if (voteCount[candidates][people] > numberChecker) {
+     numberChecker = voteCount[candidates][people];
+      officers[candidates] = people;
     }
   }
 }
-
-console.log(officers);
 
 
 
