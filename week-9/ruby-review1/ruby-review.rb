@@ -40,7 +40,7 @@ left_to_right = [[47, 44, 71, 8, 'x'],
                   [25, 'x', 96, 68, 51],
                   ['x', 70, 54, 80, 83]]
 
-loser = [[47, 44, 71, 8, 'x'],
+loser = [[47, 'x', 71, 8, 88],
           [22, 69, 75, 'x', 73],
           [83, 85, 'x', 89, 57],
           [25, 'x', 96, 68, 51],
@@ -48,7 +48,8 @@ loser = [[47, 44, 71, 8, 'x'],
 
 
 
-# Initial Solution
+# INITIAL SOLUTION 1:
+
 # class BingoScorer
 
 #   def initialize(array)
@@ -109,31 +110,80 @@ loser = [[47, 44, 71, 8, 'x'],
 # end
 
 
-# Refactored Solution
+# INITIAL SOLUTION 2:
+
+# class BingoScorer
+
+#   def initialize(array)
+#     @array = array
+#   end
+
+#   def horizontal_win?(array)
+#     array.each do |sub_array|
+#       x_counter = 0
+#       sub_array.each do |element|
+#         if element == "x"
+#           x_counter += 1
+#         end
+#         if x_counter == 5
+#           puts "BINGO!!"
+#         end
+#       end
+#     end
+#   end
+
+#   def vertical_win?
+#     new_array = @array.transpose
+#     horizontal_win?(new_array)
+#   end
+
+#   def diagonal_win?
+#     i=0
+#     x_counter1 = 0
+#     x_counter2 = 0
+#     while i < 5
+#       if @array[i][i] == 'x'
+#         x_counter1 += 1
+#       end
+#       if @array[i][-(i+1)] == 'x'
+#         x_counter2 += 1
+#       end
+#       i += 1
+#     end
+#     if x_counter1 == 5 || x_counter2 == 5
+#       puts "BINGO!!"
+#     else
+#       puts "YOU ARE A LOSER!!"
+#     end
+#   end
+
+
+# end
+
+
+# REFACTORED SOLUTION:
 
 class BingoScorer
 
   def initialize(array)
     @array = array
+    @win_condition = false
+    row_column_win?
+    diagonal_win?
+    win_result
   end
 
-  def horizontal_win?(array)
-    array.each do |sub_array|
-      x_counter = 0
-      sub_array.each do |element|
-        if element == "x"
-          x_counter += 1
-        end
-        if x_counter == 5
-          puts "BINGO!!"
-        end
+  def row_column_win?
+    @array.each do |sub_array|
+      if sub_array.join("") == "xxxxx"
+        @win_condition = true
       end
     end
-  end
-
-  def vertical_win?
-    new_array = @array.transpose
-    horizontal_win?(new_array)
+    @array.transpose.each do |sub_array|
+      if sub_array.join("") == "xxxxx"
+        @win_condition = true
+      end
+    end
   end
 
   def diagonal_win?
@@ -150,13 +200,17 @@ class BingoScorer
       i += 1
     end
     if x_counter1 == 5 || x_counter2 == 5
-      puts "BINGO!!"
-    else
-      puts "YOU ARE A LOSER!!"
+      @win_condition = true
     end
   end
 
-
+  def win_result
+    if @win_condition == true
+      puts "BINGO!!!"
+    else
+      puts "You are the biggest loser!!"
+    end
+  end
 
 end
 
@@ -166,19 +220,8 @@ end
 # DRIVER TESTS GO BELOW THIS LINE
 
 test1 = BingoScorer.new(horizontal)
-test1.horizontal_win?(horizontal)
-
 test2 = BingoScorer.new(vertical)
-test2.vertical_win?
-
 test3 = BingoScorer.new(left_to_right)
-test3.diagonal_win?
-
 test4 = BingoScorer.new(right_to_left)
-test4.diagonal_win?
-
 test5 = BingoScorer.new(loser)
-test5.diagonal_win?
 
-
-# Reflection

@@ -31,15 +31,7 @@
 // }
 
 
-// addItem("milk", 1);
-// addItem("eggs", 2);
-// addItem("banana", 3);
-// addItem("beer", 12);
-// printlist();
-// removeItem("banana");
-// printlist();
-// updateQty("beer", 24);
-// printlist();
+
 
 
 
@@ -64,4 +56,14 @@ printlist = function(){
   console.log(shoppingList);
 }
 
+
+addItem("milk", 1);
+addItem("eggs", 2);
+addItem("banana", 3);
+addItem("beer", 12);
+printlist();
+removeItem("banana");
+printlist();
+updateQty("beer", 24);
+printlist();
 
