@@ -48,7 +48,7 @@ loser = [[47, 'x', 71, 8, 88],
 
 
 
-# INITIAL SOLUTION 1:
+# INITIAL SOLUTION:
 
 # class BingoScorer
 
@@ -109,56 +109,6 @@ loser = [[47, 'x', 71, 8, 88],
 
 # end
 
-
-# INITIAL SOLUTION 2:
-
-# class BingoScorer
-
-#   def initialize(array)
-#     @array = array
-#   end
-
-#   def horizontal_win?(array)
-#     array.each do |sub_array|
-#       x_counter = 0
-#       sub_array.each do |element|
-#         if element == "x"
-#           x_counter += 1
-#         end
-#         if x_counter == 5
-#           puts "BINGO!!"
-#         end
-#       end
-#     end
-#   end
-
-#   def vertical_win?
-#     new_array = @array.transpose
-#     horizontal_win?(new_array)
-#   end
-
-#   def diagonal_win?
-#     i=0
-#     x_counter1 = 0
-#     x_counter2 = 0
-#     while i < 5
-#       if @array[i][i] == 'x'
-#         x_counter1 += 1
-#       end
-#       if @array[i][-(i+1)] == 'x'
-#         x_counter2 += 1
-#       end
-#       i += 1
-#     end
-#     if x_counter1 == 5 || x_counter2 == 5
-#       puts "BINGO!!"
-#     else
-#       puts "YOU ARE A LOSER!!"
-#     end
-#   end
-
-
-# end
 
 
 # REFACTORED SOLUTION:
