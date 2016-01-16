@@ -9,38 +9,30 @@
   <header>
     <h1>Shopping List</h1>
   </header>
-  <section class="add-item-table">
-    <table id="add-item">
-      <th colspan="2">Add Item</th>
-      <tr>
-        <td>Item:</td>
-        <td><input id="item-to-add"></td>
-      </tr>
-      <tr>
-        <td>Qty:</td>
-        <td><input id="qty-to-add"></td>
-      </tr>
-    </table>
-  </section>
 
-  <section>
-    <input id="add-button" type="submit" value="ADD!">
-  </section>
+  <form class="itemForm">
+    <p id="item_tag">Item to Add:<input type="text" name="itemToAdd"/></p>
+    <p id="qty_tag">Qty to Add: <input type="text" name="qtyToAdd"/></p>
+  </form>
 
-  <section class="current-item-table">
-    <table id="current-list">
-      <th colspan="2">Shopping List</th>
-      <tr>
-        <td><u>Item</u></td>
-        <td><u>Qty</u></td>
-      </tr>
-      <tr>
-        <td id="list-item"></td>
-        <td id="item-qty"></td>
-      </tr>
-  </section>
+  <div id="add-button">ADD</div>
 
+  <p id="current_list_header">Current List</p>
+
+  <table id="current_list_table">
+    <thead id="table_header">
+      <tr>
+        <th id="item_header">ITEM</th>
+        <th id="qty_header">QTY</th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+    </tbody>
+  </table>
+
+  <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
   <script type="text/javascript" src="glist.js"></script>
-
 </body>
 </html>
+
+
