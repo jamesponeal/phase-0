@@ -4,35 +4,68 @@ html {
 
 h1 {
   font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
-  font-weight: 100;
   text-align: center;
   font-size: 70px;
   margin: 0px 0px 0px 0px;
   display: block;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 
-table {
-  margin: 0 auto;
+.itemForm {
+  display: inline-block;
 }
 
-th, td, tr {
-  border: 1px #52527a solid;
+#item_tag {
+  margin: 1em 0em 1em 30em;
 }
 
-/*td, tr {
-  width: 50%;
-}*/
-
-#current-list {
-  text-align: center;
+#qty_tag {
+  margin: 1em 0em 1em 30em;
 }
 
 #add-button {
   background-color: #a3a3c2;
   color: black;
-  padding: 1em;
-  margin: 1em 45%;
-  width: 10%;
+  text-align: center;
+  margin: 0em auto;
+  display: block;
+  height: 3em;
+  line-height: 3em;
+  width: 6em;
+  border-radius: 5px;
+}
+
+#current_list_header {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+#current_list_table {
+  margin: 0 auto;
+}
+
+#table_header {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+#item_header {
+  width: 80%;
+}
+
+#qty_header {
+  width: 20%;
+}
+
+.qtyData {
+  text-align: center;
 }
 
